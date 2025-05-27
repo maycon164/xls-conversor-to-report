@@ -816,7 +816,7 @@ video {
             </tr>
           </thead>
           <tbody>
-            {% for item in items %}
+            {% for item in rows %}
               <tr>
                 <td class="border-b py-3 pl-3">{{item.date.strftime("%d/%m/%Y")}}</td>
                 <td class="border-b py-3 pl-2 text-center">{{item.init_time.strftime("%I:%M %p")}}</td>

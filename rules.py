@@ -1,11 +1,12 @@
 from datetime import time
 
+from core.model.index import ReportRow
+
 DEFAULT_DESCRIPTION_MESSAGE = "Trabalhando no projeto MoneyLaw"
 
 def check_description(item):
     if item["description"] == "":
         item["description"] = DEFAULT_DESCRIPTION_MESSAGE
-
 
 def apply_rate_over_end_time(item):
 
@@ -19,10 +20,10 @@ def capitalize_description(item):
 ## Chain of responsability
 def make_handler(*rules):
 
-    def handlers(item):
+    def handlers(report_row: ReportRow):
         for rule in rules:
-            rule(item)
-        return item
+            rule(report_row)
+        return report_row
 
     return handlers
 
