@@ -759,7 +759,7 @@ video {
                         <td class="pl-4">
                           <div>
                             <p class="whitespace-nowrap text-slate-400 text-right">Invoice #</p>
-                            <p class="whitespace-nowrap font-bold text-main text-right">{{invoice_code}}</p>
+                            <p class="whitespace-nowrap font-bold text-main text-right">{{developer.bank_info.invoice_code}}</p>
                           </div>
                         </td>
                       </tr>
@@ -778,16 +778,16 @@ video {
             <tr>
               <td class="w-1/2 align-top">
                 <div class="text-sm text-neutral-600">
-                  <p class="font-bold">{{dev_name}}</p>
-                  <p>{{dev_address}}</p>
-                  <p>{{dev_city}}</p>
+                  <p class="font-bold">{{developer.name}}</p>
+                  <p>{{developer.address}}</p>
+                  <p>{{developer.city}}</p>
                 </div>
               </td>
               <td class="w-1/2 align-top text-right">
                 <div class="text-sm text-neutral-600">
-                  <p class="font-bold">{{costumer_company_name}}</p>
-                  <p>{{costumer_address}}</p>
-                  <p>{{costumer_city}}</p>
+                  <p class="font-bold">{{costumer.company_name}}</p>
+                  <p>{{costumer.address}}</p>
+                  <p>{{costumer.city}}</p>
                 </div>
               </td>
             </tr>
@@ -872,8 +872,8 @@ video {
 
       <div class="px-14 text-lg text-neutral-700">
         <p class="text-main font-bold">PAYMENT DETAILS</p>
-        <p>{{bank_name}}</p>
-        <h2>ChavePix: {{bank_pix_key}}</h2>
+        <p>{{developer.bank_info.name}}</p>
+        <h2>ChavePix: {{developer.bank_info.pix_key}}</h2>
       </div>
 
       <!---<div class="px-14 py-10 text-sm text-neutral-700">
