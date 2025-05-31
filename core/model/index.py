@@ -3,6 +3,26 @@ from datetime import date, datetime
 from typing import List
 from datetime import time
 
+
+@dataclass
+class BankInformation:
+    invoice_code: str
+    name: str
+    pix_key: str
+
+@dataclass
+class Developer:
+    name: str
+    address: str
+    city: str
+    bank_info: BankInformation
+
+@dataclass
+class Costumer:
+    company_name: str
+    address: str
+    city: str
+
 @dataclass
 class ReportRow:
     date: str
@@ -20,21 +40,12 @@ class ReportRow:
     def set_additional(self, additional: float):
         self.additional = additional
 
-
 @dataclass
 class Report:
     generated_date: date
-    invoice_code: str
-    dev_name: str
-    dev_address: str
-    dev_city: str
-    costumer_company_name: str
-    costumer_address: str
-    costumer_city: str
-    bank_name: str
-    bank_pix_key: str
     rows: List[ReportRow]
-
+    developer: Developer
+    costumer: Costumer
     total_hours: str
     total_value: str
     additional: str
