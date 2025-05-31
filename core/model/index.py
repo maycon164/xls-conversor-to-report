@@ -1,6 +1,6 @@
 from dataclasses import dataclass, asdict
 from datetime import date, datetime
-from typing import Dict, List
+from typing import List
 from datetime import time
 
 @dataclass
