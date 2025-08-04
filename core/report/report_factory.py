@@ -42,7 +42,7 @@ class ReportFactory:
 
     def create_bank_info(self, config: dict):
         bank_info = BankInformation(
-            "TODO_GENERATE_CODE_INVOICE",
+            "AVBC#1281",
             config["account"]["bank_name"],
             config["account"]["pixkey"],
         )

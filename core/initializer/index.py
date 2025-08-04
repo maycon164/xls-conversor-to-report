@@ -8,7 +8,7 @@ from core.report.row_report_enhancer import DescriptionHandler, CapitalizeDescri
 
 
 def init():
-    file = "./resources/ml-report.xls"
+    file = "./resources/moneylaw-julho.xls"
     cols = ["Data", "Hora de Início", "Hora de Término", "Duração", "Salário", "Descrição"]
     config_file_path = "./resources/config.yml"
 
@@ -30,3 +30,5 @@ def init():
     report_pdf_processor.generate_report(report_dto)
 
 init()
+
+#generate_pdf("./resources", "curriculo-template.html")
